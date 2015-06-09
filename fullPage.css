@@ -1,0 +1,42 @@
+/**
+ * fullpage
+ * hualuyao
+ * 2015/6/9
+ */
+
+html, body {
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	margin: 0;
+	padding: 0;
+	font-family: arial;
+}
+
+.page-wrapper {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+
+.page-wrapper .page {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	overflow: hidden;
+	transition: translate3d 500ms ease;
+	-webkit-transition: translate3d 500ms ease;
+}
+
+.page-wrapper .page:not(:first-child) {
+	transform: translate3d(0, 100%, 0);    /**开启gpu加速**/
+	-webkit-transform: translate3d(0, 100%, 0);
+}
+
+.currentPage {
+	transform: translate3d(0, 0, 0);
+	-webkit-transform: translate3d(0, 0, 0);
+}
